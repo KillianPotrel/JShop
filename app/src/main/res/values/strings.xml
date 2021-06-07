@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JShop</string>
+    <string name="btn_connexion">Connexion</string>
+    <string name="btn_inscription">Inscription</string>
+    <string name="tvLogin">Login</string>
+    <string name="tvConnexionMdp">Mot de passe</string>
+</resources>

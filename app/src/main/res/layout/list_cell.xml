@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toStartOf="@+id/rowListButtonEdit"
+        android:padding="5dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/rowListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/rowListDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/rowListButtonEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/rowListButtonShare"
+        android:src="@android:drawable/ic_menu_edit"/>
+    <ImageButton
+        android:id="@+id/rowListButtonShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/rowListButtonOpen"
+        android:src="@android:drawable/ic_menu_share"/>
+    <ImageButton
+        android:id="@+id/rowListButtonOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_view"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

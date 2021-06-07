@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".LoginActivity">
+
+
+
+    <TextView
+        android:id="@+id/tvConnexionLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/tvLogin"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edtConnexionLogin"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvConnexionLogin"
+        android:layout_toEndOf="@+id/tvConnexionPassword"/>
+
+    <TextView
+        android:id="@+id/tvConnexionPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvConnexionLogin"
+        android:text="@string/tvConnexionMdp"
+        android:layout_marginTop="15sp"
+        android:padding="5dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edtConnexionPassword"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvConnexionPassword"
+        android:inputType="textPassword"
+        android:layout_toEndOf="@+id/tvConnexionPassword"/>
+
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_below="@id/edtConnexionPassword"
+        android:text="@string/btn_connexion"/>
+    <Button
+        android:id="@+id/btnInscription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="15sp"
+        android:layout_below="@id/edtConnexionPassword"
+        android:layout_toEndOf="@+id/btnConnexion"
+        android:text="@string/btn_inscription"/>
+
+</RelativeLayout>
