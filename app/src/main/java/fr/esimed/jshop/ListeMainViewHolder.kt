@@ -11,5 +11,4 @@ class ListeMainViewHolder (row : View) : RecyclerView.ViewHolder(row) {
     val tvDate = row.findViewById<TextView>(R.id.rowListDate)
     val btnEdit =row.findViewById<ImageButton>(R.id.rowListButtonEdit)
     val btnShare =row.findViewById<ImageButton>(R.id.rowListButtonShare)
-    val btnOpen =row.findViewById<ImageButton>(R.id.rowListButtonOpen)
 }

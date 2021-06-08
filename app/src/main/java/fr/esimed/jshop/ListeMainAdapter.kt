@@ -26,15 +26,16 @@ class ListeMainAdapter(private val context: Context,
         val formatedDate = sdf.format(liste.date)
         holder.tvDate.text = formatedDate
         
-        holder.btnOpen.setOnClickListener {
+        holder.btnShare.setOnClickListener {
+            //etablissementDao.update(etablissement)
+        }
+
+
+        holder.itemView.setOnClickListener {
             //Start activity etablissement
             val intent = Intent(context, ItemActivity::class.java)
             intent.putExtra("Liste", liste)
             context.startActivity(intent)
-        }
-
-        holder.btnShare.setOnClickListener {
-            //etablissementDao.update(etablissement)
         }
     }
 

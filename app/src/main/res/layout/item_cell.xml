@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewList"
+        android:id="@+id/cardViewItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardElevation="100dp"
@@ -15,38 +15,32 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_toStartOf="@+id/rowListButtonEdit"
             android:padding="5dp"
             android:orientation="vertical">
+
             <TextView
-                android:id="@+id/rowListName"
+                android:id="@+id/rowItemName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@+id/rowListButtonEdit"
+                android:layout_toStartOf="@+id/rowItemCheck"
                 android:textSize="20sp"/>
+
             <TextView
-                android:id="@+id/rowListDate"
+                android:id="@+id/rowItemQuantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rowListName"
-                android:layout_toStartOf="@+id/rowListButtonEdit"
+                android:layout_below="@+id/rowItemName"
+                android:layout_toStartOf="@+id/rowItemCheck"
                 android:layout_marginTop="5dp"/>
 
-            <ImageButton
-                android:id="@+id/rowListButtonEdit"
+            <CheckBox
+                android:id="@+id/rowItemCheck"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@+id/rowListButtonShare"
-                android:src="@android:drawable/ic_menu_edit"/>
-            <ImageButton
-                android:id="@+id/rowListButtonShare"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:src="@android:drawable/ic_menu_share"/>/>
+                android:layout_alignParentEnd="true"/>
 
         </RelativeLayout>
-
     </androidx.cardview.widget.CardView>
 </LinearLayout>

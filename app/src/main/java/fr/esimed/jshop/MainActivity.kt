@@ -40,17 +40,24 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<Liste>>, response: Response<List<Liste>>) {
                 if (response.isSuccessful) {
                     val result = response.body()?.toMutableList()
-                    Toast.makeText(this@MainActivity, ""+ result?.count(),Toast.LENGTH_LONG).show()
-                    //recyclerListData.postValue(response.body())
+                    if(!result.isNullOrEmpty()){
+                        var list : String = " liste"
+                        if(result.count() > 1)
+                            list = " listes"
 
-                    val mesListes = findViewById<RecyclerView>(R.id.recyclerMainList)
-                    mesListes.layoutManager = LinearLayoutManager(this@MainActivity)
-                    mesListes.adapter = ListeMainAdapter(this@MainActivity, response.body()!!)
+                        Toast.makeText(this@MainActivity, "Vous avez "+ result.count() + list ,Toast.LENGTH_SHORT).show()
+
+                        val mesListes = findViewById<RecyclerView>(R.id.recyclerMainList)
+                        mesListes.layoutManager = LinearLayoutManager(this@MainActivity)
+                        mesListes.adapter = ListeMainAdapter(this@MainActivity, response.body()!!)
+                    } else {
+                        Toast.makeText(this@MainActivity, "Vous n'avez pas de résultats." ,Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
             override fun onFailure(call: Call<kotlin.collections.List<Liste>>, t: Throwable) {
                     //recyclerListData.postValue(null)
-                    Toast.makeText(this@MainActivity, t.localizedMessage,Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@MainActivity, t.localizedMessage,Toast.LENGTH_SHORT).show()
             }
         })
     }

@@ -47,5 +47,17 @@ abstract class ApiInstance {
 
             return retrofit.create(ListService::class.java)
         }
+
+        fun createItem(): ItemService {
+            val httpClient = httpClient()
+            val retrofit = Retrofit.Builder()
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(baseURL)
+                .client(httpClient)
+                .build()
+
+            return retrofit.create(ItemService::class.java)
+        }
     }
 }
